@@ -1,0 +1,18 @@
+{
+  "formatter": {
+    "ignore": [
+      ".next"
+    ],
+    "indentStyle": "space"
+  },
+  "linter": {
+    "enabled": true,
+    "ignore": [
+      ".next",
+      "next-env.d.ts"
+    ],
+    "rules": {
+      "recommended": true
+    }
+  }
+}
