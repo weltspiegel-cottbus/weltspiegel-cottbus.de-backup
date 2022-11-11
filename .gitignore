@@ -4,3 +4,6 @@ node_modules/
 # next
 .next/
 next-env.d.ts
+
+# sensible data
+.env.local
