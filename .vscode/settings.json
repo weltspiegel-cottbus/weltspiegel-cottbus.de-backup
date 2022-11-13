@@ -1,5 +1,13 @@
 {
   "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "typescript.tsdk": "node_modules\\.pnpm\\typescript@4.8.4\\node_modules\\typescript\\lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
   "[javascript]": {
     "editor.maxTokenizationLineLength": 2500,
     "editor.defaultFormatter": "rome.rome"
@@ -23,7 +31,5 @@
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "rome.rome"
-  },
-  "typescript.tsdk": "node_modules\\.pnpm\\typescript@4.8.4\\node_modules\\typescript\\lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
+  }
 }
