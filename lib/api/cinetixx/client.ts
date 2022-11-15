@@ -20,7 +20,7 @@ export async function getEvents() {
     if (!eventIds[eventId]) {
       eventIds[eventId] = true;
       events.push({
-        id: eventId,
+        id: `${eventId}`,
         title: element.VERANSTALTUNGSTITEL,
         text: element.TEXT,
         poster: element.ARTWORK,
@@ -30,4 +30,10 @@ export async function getEvents() {
   });
 
   return events;
+}
+
+export async function getEvent(eventId: string) {
+  const events = await getEvents();
+
+  return events.find((event) => event.id === eventId);
 }
