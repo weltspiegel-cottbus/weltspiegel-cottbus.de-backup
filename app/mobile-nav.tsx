@@ -2,8 +2,8 @@
 
 import { Fragment, useState } from "react";
 import Link from "next/link";
-import { Dialog, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Dialog, Transition } from "@headlessui/react";
+import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { classNames } from "@/lib/utility/class-names";
 
 import { Kameron } from "@next/font/google";
@@ -64,7 +64,7 @@ export default function MobileNav() {
                   <div className="absolute top-0 right-0 -mr-12 pt-2">
                     <button
                       type="button"
-                      className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400"
+                      className="ml-1 flex h-8 w-8 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400"
                       onClick={() => setSidebarOpen(false)}
                     >
                       <span className="sr-only">Close sidebar</span>
@@ -75,7 +75,7 @@ export default function MobileNav() {
                     </button>
                   </div>
                 </Transition.Child>
-                <div className="pt-2 h-0 flex-1 overflow-y-auto">
+                <div className="pt-6 h-0 flex-1 overflow-y-auto">
                   <nav className="space-y-1 px-2">
                     {staticNavigation.map((item) => (
                       <Link
@@ -107,10 +107,10 @@ export default function MobileNav() {
       <div className="md:hidden fixed top-0 pl-2 pt-2 z-10">
         <button
           onClick={() => setSidebarOpen(true)}
-          className="flex bg-orange-400 text-stone-900 h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400"
+          className="flex bg-orange-400 text-stone-900 h-8 w-8 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400"
           aria-label="Hauptmenu"
         >
-          <Bars3Icon className="h-6 w-6" />
+          <Bars3BottomLeftIcon className="h-6 w-6" />
         </button>
       </div>
     </>
