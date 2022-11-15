@@ -12,12 +12,20 @@ export async function getEvents() {
   const parser = new XMLParser({ ignoreAttributes: true });
   const data = parser.parse(rawString);
 
-  const events: { [eventId: string]: Event } = {};
+  const eventIds: { [eventId: string]: boolean } = {};
+  const events: Event[] = [];
 
   data.ShowInfo.Show.forEach((element: any) => {
     const eventId = element.EVENT_ID;
-    if (!events[eventId]) {
-      events[eventId] = { title: element.VERANSTALTUNGSTITEL };
+    if (!eventIds[eventId]) {
+      eventIds[eventId] = true;
+      events.push({
+        id: eventId,
+        title: element.VERANSTALTUNGSTITEL,
+        text: element.TEXT,
+        poster: element.ARTWORK,
+        posterBig: element.ARTWORK_BIG,
+      });
     }
   });
 

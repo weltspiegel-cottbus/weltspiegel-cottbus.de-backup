@@ -3,4 +3,12 @@ export default {
   experimental: {
     appDir: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.cinetixx.com",
+      },
+    ],
+  },
 };
