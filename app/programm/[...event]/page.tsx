@@ -13,7 +13,7 @@ export default async function Page({
   const event = await getData({ params });
 
   return event ? (
-    <div>
+    <div className="sm:mt-0 sm:pl-12 md:pl-24">
       <div className="float-left mr-4 mb-1 shrink-0 grow-0 h-60 w-[172px] p-1 bg-stone-600">
         <div className="relative h-full w-full">
           <Image
