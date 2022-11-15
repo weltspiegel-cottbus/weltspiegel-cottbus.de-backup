@@ -30,8 +30,8 @@ export default async function () {
       </a>
 
       <p className="mt-4">
-        Gutscheine können außerdem täglich im Weltspiegel erworben we rde n -
-        jeweils 30 Min vor Vorstellungsbeginn öffnet die Kasse.
+        Gutscheine können außerdem täglich im Weltspiegel erworben werden -
+        jeweils 30 Min. vor Vorstellungsbeginn öffnet die Kasse.
       </p>
     </Content>
   );
