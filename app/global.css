@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .content-title {
+    @apply text-orange-400 text-4xl;
+  }
+
+  @media screen(sm) {
+    .content-title {
+      @apply absolute left-8;
+      transform: rotate(-90deg) translate(-100%, -100%);
+      transform-origin: 0 0;
+    }
+  }
+
+  @media screen(md) {
+    .content-title {
+      @apply absolute left-20;
+    }
+  }
+}
