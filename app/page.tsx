@@ -28,7 +28,7 @@ export default async function HomePage() {
             {entry.title &&
               (entry.link ? (
                 entry.link.startsWith("http") ? (
-                  <a href={entry.link}>
+                  <a href={entry.link} target="_blank" rel="noreferrer">
                     <h2 className="content-link text-2xl">{entry.title}</h2>
                   </a>
                 ) : (
@@ -39,15 +39,38 @@ export default async function HomePage() {
               ) : (
                 <h2 className="text-orange-400 text-2xl">{entry.title}</h2>
               ))}
-            {entry.image && (
-              <Image
-                className="w-full object-cover"
-                src={cmsClient.getImageUrl(entry.image.url)}
-                alt={entry.image.title}
-                width={entry.image.width}
-                height={entry.image.height}
-              />
-            )}
+            {entry.image &&
+              (entry.link ? (
+                entry.link.startsWith("http") ? (
+                  <a href={entry.link} target="_blank" rel="noreferrer">
+                    <Image
+                      className="w-full object-cover"
+                      src={cmsClient.getImageUrl(entry.image.url)}
+                      alt={entry.image.title}
+                      width={entry.image.width}
+                      height={entry.image.height}
+                    />
+                  </a>
+                ) : (
+                  <Link className="content-link text-2xl" href={entry.link}>
+                    <Image
+                      className="w-full object-cover"
+                      src={cmsClient.getImageUrl(entry.image.url)}
+                      alt={entry.image.title}
+                      width={entry.image.width}
+                      height={entry.image.height}
+                    />
+                  </Link>
+                )
+              ) : (
+                <Image
+                  className="w-full object-cover"
+                  src={cmsClient.getImageUrl(entry.image.url)}
+                  alt={entry.image.title}
+                  width={entry.image.width}
+                  height={entry.image.height}
+                />
+              ))}
             {entry.text && <p>{entry.text}</p>}
             <hr className="border-orange-200 my-2" />
           </div>
