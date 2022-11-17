@@ -12,7 +12,7 @@ export default async function () {
       </p>
       <p className="my-6 text-center ">
         <a
-          className="text-lg font-semibold text-orange-400 hover:underline"
+          className="text-lg font-semibold content-link"
           target="_blank"
           rel="noreferrer"
           href="https://booking.cinetixx.de/frontend/index.html?bgswitch=false&programlink=false&cinemaId=808957959#/gutscheine"

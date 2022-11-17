@@ -7,6 +7,10 @@
     @apply text-orange-400 text-4xl;
   }
 
+  .content-link {
+    @apply text-orange-400 hover:underline underline-offset-2;
+  }
+
   @media screen(sm) {
     .content-title {
       @apply absolute left-8;
